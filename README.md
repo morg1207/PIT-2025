@@ -9,6 +9,5 @@ Repositorio oficial del curso **Programación de Robots con ROS** (Noetic). Aqu�
 2. [Uso del Repositorio](./docs/uso_repositorio.md) 
 3. [Configuración de VSCode para ROS](./docs/configuracion_vscode.md)  
  
-4. [Prácticas y Proyectos](#-prácticas-y-proyectos)  
 
 

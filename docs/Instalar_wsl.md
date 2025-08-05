@@ -75,3 +75,9 @@ Después de la instalación, reinicia para aplicar los cambios.
    wsl
    ```  
 
+## **🚀 Siguientes Pasos**
+
+1. [Instalar ROS](./instalar_ROS.md)  
+
+---
+

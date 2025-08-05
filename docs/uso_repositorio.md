@@ -21,10 +21,10 @@ catkin_make
 source devel/setup.bash
 ```
 
-### 3. Configuración de VSCode
+## **🚀 Siguientes Pasos**
+1. Configuración de VSCode
 Revisa la guía completa de configuración:  
 [📖 Configuración de VSCode para ROS](./configuracion_vscode.md)
-
 ---
 
 ## ⚠️ Solución de problemas
