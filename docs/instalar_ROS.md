@@ -1,13 +1,9 @@
-Here's a polished `INSTALL_ROS.md` guide for your PIT 2025 repository with clear instructions and navigation:
-
----
-
 # **📦 Instalación de ROS Noetic en WSL/Ubuntu 20.04**
 
 Guía oficial para configurar ROS Noetic en el entorno del curso PIT 2025.
 
 ## **Prerrequisitos**
-- WSL2 con Ubuntu 20.04 ([Guía de instalación](./Instalar_wsl.md.md))
+- WSL2 con Ubuntu 20.04 ([Guía de instalación](./Instalar_wsl.md))
 - Mínimo 4GB de RAM asignados a WSL
 - Conexión a Internet estable
 
@@ -72,48 +68,3 @@ Ejecuta estos comandos para confirmar que todo funciona:
 1. [Clonar y uso del repositorio del curso](./uso_repositorio.md)
 
 ---
-
-## **⚠️ Solución de Problemas Comunes**
-
-### **Error con rosdep**
-```bash
-sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
-sudo rosdep init
-rosdep update
-```
-
-### **Problemas de permisos en WSL**
-```bash
-sudo chown -R $USER /opt/ros
-```
-
-### **Paquetes faltantes**
-```bash
-rosdep install --from-paths src --ignore-src -y
-```
-
----
-
-## **📚 Recursos Adicionales**
-- [Documentación oficial ROS Noetic](http://wiki.ros.org/noetic)
-- [Foro de ROS Answers](https://answers.ros.org/)
-
-[← Volver al README principal](../README.md) | [→ Ir a Configuración de VSCode](./configuracion_vscode.md)
-
----
-
-**Nota para estudiantes**:  
-Todos los comandos deben ejecutarse en la terminal de WSL (Ubuntu 20.04). Contactar a los instructores si persisten errores después de seguir esta guía.
-
----
-
-This version features:
-1. Clear terminal commands with proper formatting
-2. Logical progression from installation to verification
-3. Troubleshooting section for common issues
-4. Direct links to next steps
-5. Consistent navigation back to main README
-6. Student-focused notes
-7. Responsive design for GitHub Markdown
-
-Would you like me to add any specific details about GPU acceleration or ROS workspace configuration?
