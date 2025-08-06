@@ -4,7 +4,7 @@ project(test_package)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  std_msgs
+  #std_msgs
 )
 
 
@@ -18,9 +18,11 @@ catkin_package(
 add_executable(nodo_publicador src/publicador.cpp)
 target_link_libraries(nodo_publicador ${catkin_LIBRARIES})
 
+add_executable(nodo_suscriptor src/suscriptor.cpp)
+target_link_libraries(nodo_suscriptor ${catkin_LIBRARIES})
 
-add_executable(parabolic src/parabolic.cpp)
-target_link_libraries(parabolic ${catkin_LIBRARIES})
+add_executable(nodo_parabola src/pub_sub.cpp)
+target_link_libraries(nodo_parabola ${catkin_LIBRARIES})
 
 include_directories(
 # include

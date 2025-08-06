@@ -13,7 +13,6 @@ void poseCallback(const turtlesim::Pose::ConstPtr& msg) {
 
 
 int main(int argc, char **argv) {
-
     ros::init(argc, argv, "turtle_parabola");
     ros::NodeHandle nh;
 
