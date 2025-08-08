@@ -1,0 +1,7 @@
+<launch>
+
+    <node name="turtlesim" type= "turtlesim_node" pkg="turtlesim" output="screen"/>
+
+    <node name="servicio_parabola" type= "nodo_servidor_parabola" pkg="service_package" output="screen"/>
+
+</launch>

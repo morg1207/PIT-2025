@@ -1,0 +1,7 @@
+<launch>
+
+    
+    <node pkg= "launch_files" name="parameter_server" type="nodo_parameter_server" output="screen">
+        <param name="~/topic_name_param" type="string" value="/turtle1/cmd_vel"/>
+    </node>
+</launch>
