@@ -1,0 +1,7 @@
+   <launch> 
+   <!-- Simulación de tortuga-->
+   <node name="turtlesim" pkg="turtlesim" type= "turtlesim_node" output="screen"/>
+
+   <!-- Insertar tortugas-->
+    <node name="spawn_turtles" pkg="clase5" type= "nodo_cliente" output="screen"/>
+</launch>

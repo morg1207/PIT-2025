@@ -1,0 +1,13 @@
+   <launch> 
+   <!-- Parámetros-->
+   <rosparam file="$(find launch_files)/config/parameter.yaml" command="load" />
+
+   <!-- nodos para conducción de tortugas-->
+   <node name="turtle1" pkg= "launch_files"  type="nodo_parameter_server" output="screen"/>
+   <node name="turtle2" pkg= "launch_files"  type="nodo_parameter_server" output="screen"/>
+   <node name="turtle3" pkg= "launch_files"  type="nodo_parameter_server" output="screen"/>
+   <node name="turtle4" pkg= "launch_files"  type="nodo_parameter_server" output="screen"/>
+   <node name="turtle5" pkg= "launch_files"  type="nodo_parameter_server" output="screen"/>
+
+
+</launch>

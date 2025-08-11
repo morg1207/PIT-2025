@@ -1,7 +1,25 @@
 <launch>
 
-    
-    <node pkg= "launch_files" name="parameter_server" type="nodo_parameter_server" output="screen">
-        <param name="~/topic_name_param" type="string" value="/turtle1/cmd_vel"/>
+    <arg name="topic_name_arg" default="cmd_vel"/> 
+
+    <arg name="vel_max_turtle1_arg" default="0.5"/> 
+    <arg name="vel_max_turtle2_arg" default="0.5"/> 
+    <arg name="vel_max_turtle3_arg" default="0.5"/> 
+
+    <node name="turtle1" pkg= "launch_files"  type="nodo_parameter_server" output="screen">
+        <param name="topic_name_param" type="string" value="$(arg topic_name_arg)"/>
+        <param name="vel_max_param" type="double" value="$(arg vel_max_turtle1_arg)"/>
     </node>
+
+    <node name="turtle2" pkg= "launch_files"  type="nodo_parameter_server" output="screen">
+        <param name="topic_name_param" type="string" value="$(arg topic_name_arg)"/>
+        <param name="vel_max_param" type="double" value="$(arg vel_max_turtle2_arg)"/>
+    </node>
+
+    <node name="turtle3" pkg= "launch_files"  type="nodo_parameter_server" output="screen">
+        <param name="topic_name_param" type="string" value="$(arg topic_name_arg)"/>
+        <param name="vel_max_param" type="double" value="$(arg vel_max_turtle3_arg)"/>
+    </node>
+
+
 </launch>

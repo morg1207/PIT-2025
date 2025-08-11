@@ -1,0 +1,21 @@
+turtle1:
+  topic_name_param: "cmd_vel"
+  vel_max_param: 0.5
+
+turtle2:
+  topic_name_param: "cmd_vel"
+  vel_max_param: 2.0
+
+turtle3:
+  topic_name_param: "cmd_vel"
+  vel_max_param: 6.0
+
+turtle4:
+  topic_name_param: "cmd_vel"
+  vel_max_param: 4.0
+
+turtle5:
+  topic_name_param: "cmd_vel"
+  vel_max_param: 10.0
+
+

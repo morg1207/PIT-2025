@@ -4,8 +4,7 @@
 
 int main(int argc, char** argv) {
     ros::init(argc, argv, "nodo_parametros");
-    ros::NodeHandle nh;
-
+    ros::NodeHandle nh("~");
     std::string topic_name = "turtle";
     float vel_max = 0.2;
     
