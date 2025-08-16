@@ -1,0 +1,14 @@
+<launch>
+
+<!-- Inserto mi archivo urdf en el parámetro robot_description -->
+  <param name="robot_description" command="cat $(find pitbot_description)/urdf/pitbot.urdf" />
+
+  <!-- Enviar estados de las articulaciones desde una interfaz gráfica -->
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
+
+  <!-- Publicar el arból de transformaciones de las articulaciones estáticas y dinámicas  en los tópicos tf y tf_static -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+ <!-- Abrir rviz con una configuración determinada  -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pitbot_description)/rviz/display_robot.rviz"/>
+</launch>

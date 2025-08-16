@@ -1,0 +1,100 @@
+<robot name="pitbot">
+    
+
+    <link name="base_footprint"/>
+
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="0.0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.15" length="0.15"/> 
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.3" length="0.15"/> 
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="joint_footprint_base_link" type="fixed">
+        <origin xyz="0.0 0.0 0.15" rpy="0.0 0.0 0.0"/>
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+    </joint>
+
+
+
+
+    <link name="wheel_right_link">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="0.0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.0375" length="0.03"/> 
+            </geometry>
+            <material  name="azul">
+                <color rgba="0.0 0.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.0375" length="0.03"/>  
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_base_right_wheel" type="continuous">
+        <origin xyz="0.0 0.13 -0.10" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="wheel_right_link"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit effort="0.0" velocity="0.0"/>
+    </joint>
+
+
+
+    <link name="wheel_left_link">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="0.0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.0375" length="0.03"/> 
+            </geometry>
+            <material  name="azul">
+                <color rgba="0.0 0.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.0375" length="0.03"/>  
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_base_left_wheel" type="continuous">
+        <origin xyz="0.0 -0.13 -0.10" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="wheel_left_link"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit effort="0.0" velocity="0.0"/>
+    </joint>
+
+</robot>
