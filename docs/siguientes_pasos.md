@@ -1,5 +1,5 @@
 # **Recursos Avanzados para ROS y Robótica Móvil**  
-*(Para alumnos del curso de ROS - Actualizado 2024)*  
+*(Para alumnos del curso de ROS - Actualizado 2025)*  
 
 ---
 
